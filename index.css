@@ -1,0 +1,165 @@
+body {
+    display: flex;
+    justify-content: center;
+}
+
+form {
+    margin-top: 20vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+form .buttons {
+    display: flex;
+    justify-content: center;
+    width: 70%;
+    margin: auto;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2rem;
+}
+
+input {
+    width: 20vw;
+    height: 3vh;
+}
+
+button {
+    margin-left: 1vw;
+    width: 5vw;
+    height: 3vh;
+}
+
+.container {
+    margin-top: 10vh;
+    display: flex;
+    flex-direction: row;
+}
+
+.container h2 {
+    font-size: 1.2rem;
+    color: rgb(34, 34, 34);
+}
+
+.incompleteBlock {
+    margin-right: 2vw;
+}
+
+.completedBlock {
+    margin-left: 2vw;
+}
+
+.item {
+    background-color: #efefef;
+    width: 20.4vw;
+    padding-top: 2vh;
+    padding-left: 5vw;
+    padding-bottom: 2vh;
+    transition: all 0.2s linear;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.info::before {
+    content: '';
+    background-image: url('unchecked.svg');
+    background-size: cover;
+    background-position: center;
+    width: 28px;
+    left: 10px;
+   
+    height: 28px;
+    position: absolute;
+}
+
+.item:hover {
+    background-color: #e8e8e8;
+    cursor: pointer;
+}
+
+
+.deleteTask {
+    position: absolute;
+    right: 6%;
+    transition: 0.2s linear transform;
+}
+
+.deleteTask:hover {
+    cursor: pointer;
+    transform: scale(1.4);
+}
+
+.renameTask {
+    position: absolute;
+    right: 15%;
+    transition: 0.2s linear transform;
+}
+
+.renameTask:hover {
+    cursor: pointer;
+    transform: scale(1.4);
+}
+
+
+.info.checked {
+    text-decoration: line-through;
+}
+
+.info.checked::before {
+    content: '';
+    background-image: url('checked.svg');
+    background-size: cover;
+    background-position: center;
+    width: 28px;
+    left: 10px;
+    /* transform: translateY(-50%); */
+    height: 28px;
+    position: absolute;
+}
+
+.info.checked > .deleteTask {
+    text-decoration: none;
+}
+
+
+
+.textboxRename {
+    position: absolute;
+    width: 46%;
+    height: 30%;
+    left: 19%;
+}
+
+
+
+.containerForButtons {
+    margin-top: 12vh;
+    display: flex;
+    position: relative;
+    left: -1.6vw;
+    justify-content: space-between;
+    width: 46%;
+}
+
+.renameCancelBtn, .renameOkBtn {
+    position: static;
+   
+}
+
+.renameOkBtn:hover, .renameCancelBtn:hover {
+    cursor: pointer;
+}
+
+
+.hide {
+    position: absolute;
+    display: none;
+}
+
+.item.checked {
+    text-decoration: line-through;
+}
